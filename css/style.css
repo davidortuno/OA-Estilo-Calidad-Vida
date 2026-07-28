@@ -1062,10 +1062,15 @@ ul.lista-bibliografia li::marker {
 
   h3 {
     font-size: 2rem;
+    text-align: left;
   }
 
   h4 {
     font-size: 1.25rem;
+  }
+
+  .ejercicio-actividad h3 {
+    text-align: center;
   }
 
   .badge.pill-verde {
@@ -1080,6 +1085,10 @@ ul.lista-bibliografia li::marker {
   .objetivo-oa-pacch {
     padding: var(--40px) 12px;
     text-align: center;
+  }
+
+  .objetivo-oa-pacch h3 {
+      text-align: center;
   }
 
   .btn-comenzar-mobile {
@@ -1165,9 +1174,9 @@ ul.lista-bibliografia li::marker {
     margin-bottom: var(--10px);
   }
 
-  .ejercicio-actividad {
+  /* .ejercicio-actividad {
     text-align: left;
-  }
+  } */
 
   .contenedor-quiz {
     padding: 1.875rem;
