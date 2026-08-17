@@ -770,6 +770,9 @@ hr.linea-footer {
 
 .pag-nav-1 span {
   font-size: 0.875rem;
+  font-weight: var(--grosor-negrita);
+  margin-left: 0;
+  color: var(--verde-obscuro)
 }
 
 .pag-nav-2 {
@@ -779,6 +782,37 @@ hr.linea-footer {
   text-transform: uppercase;
   font-size: 1rem;
   font-family: var(--fuente-cursiva);
+}
+
+.pag-der .pag-nav-1 .icono-btn,
+.pag-izq .pag-nav-1 .icono-btn {
+  background-color: var(--verde-obscuro);
+}
+
+.pag-der .pag-nav-1 .icono-btn i,
+.pag-izq .pag-nav-1 .icono-btn i {
+  color: var(--blanco-total);
+}
+
+.paginacion-inferior a:hover .icono-btn {
+  background-color: var(--verde-pacch);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.paginacion-inferior a:hover .icono-btn i {
+  color: var(--verde-obscuro);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.paginacion-inferior a:hover .pag-nav-1 span {
+  color: var(--verde-pacch);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 /* Termina Paginación Interior */
@@ -1088,7 +1122,7 @@ ul.lista-bibliografia li::marker {
   }
 
   .objetivo-oa-pacch h3 {
-      text-align: center;
+    text-align: center;
   }
 
   .btn-comenzar-mobile {
