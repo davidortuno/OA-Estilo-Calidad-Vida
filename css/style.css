@@ -720,6 +720,27 @@ hr.linea-footer {
   padding-top: var(--40px);
 }
 
+.highlight {
+  background: rgba(255, 255, 0, 0.3);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-shadow: -0.166666667em 0 0 0 rgba(255, 255, 0, 0.3), 0.166666667em 0 0 0 rgba(255, 255, 0, 0.3);
+}
+
+/* .highlight {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 0, 0.3);
+}
+
+@supports (text-decoration-skip-ink: none) and (text-underline-offset: 1em) {
+  .highlight {
+    text-underline-offset: -0.65em;
+    text-decoration-thickness: 0.6em;
+    text-decoration-skip-ink: none;
+  }
+} */
+
 /* Termina Introducción */
 
 /* Inicia Paginación Interior */
