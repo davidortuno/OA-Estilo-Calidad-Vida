@@ -106,6 +106,34 @@ a:hover {
   padding-right: 0 !important;
 }
 
+.scroll-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(-45deg, #EB844C, #40B8B3, #BBC447, #6E3F6A);
+  background-size: 400% 400%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  animation: gradient 15s ease infinite;
+  transition: width 0.3s ease-out;
+  z-index: 1000;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /*
  * Inicia Header
  */
@@ -1128,12 +1156,18 @@ ul.lista-bibliografia li::marker {
     text-align: center;
   }
 
-  .badge.pill-verde {
+  .badge.pill-verde,
+  .badge.pill-naranja,
+  .badge.pill-azul,
+  .badge.pill-morado {
     font-size: 0.938rem;
     padding: var(--5px) var(--10px);
   }
 
-  .badges-oa-pacch .badge.pill-verde:first-child {
+  .badges-oa-pacch .badge.pill-verde:first-child,
+  .badges-oa-pacch .badge.pill-naranja:first-child,
+  .badges-oa-pacch .badge.pill-azul:first-child,
+  .badges-oa-pacch .badge.pill-morado:first-child {
     margin: 0 0 var(--10px) 0;
   }
 
