@@ -108,9 +108,9 @@ a:hover {
 
 .scroll-line {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 4px;
+  height: 5px;
   background: linear-gradient(-45deg, #EB844C, #40B8B3, #BBC447, #6E3F6A);
   background-size: 400% 400%;
   border-top-right-radius: 5px;
