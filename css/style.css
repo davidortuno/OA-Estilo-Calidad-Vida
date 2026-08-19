@@ -970,7 +970,8 @@ label.indicadorSelect {
 }
 
 h4.subtitulo-bibliografia,
-h4.subtitulo-creditos {
+h4.subtitulo-creditos,
+h4.subtitulo-glosario {
   font-family: var(--fuente-principal);
   font-weight: var(--grosor-negrita);
   text-transform: capitalize;
@@ -998,7 +999,8 @@ h4.subtitulo-creditos {
 }
 
 .subtitulo-bibliografia,
-.subtitulo-creditos {
+.subtitulo-creditos,
+.subtitulo-glosario {
   padding-bottom: var(--80px);
 }
 
@@ -1062,6 +1064,32 @@ ul.lista-bibliografia li::marker {
 .table-transparent {
   --bs-table-bg: transparent !important;
 }
+
+/* Glosario */
+
+.glosario h4 {
+  text-transform: none;
+}
+
+.bloque-glosario-50,
+.bloque-glosario-100 {
+  background-color: var(--blanco-texto);
+  padding: var(--40px);
+  border-radius: var(--20px);
+  text-align: left;
+  margin-bottom: var(--20px);
+}
+
+.bloque-glosario-50 p:last-child,
+.bloque-glosario-100 p:last-child {
+  margin-bottom: 0;
+}
+
+.bloque-glosario-100 h4:not(:first-child) {
+  margin-top: var(--40px);
+}
+
+/* Glosario */
 
 /* Inician Media Queries */
 
@@ -1253,12 +1281,19 @@ ul.lista-bibliografia li::marker {
   }
 
   .subtitulo-bibliografia,
-  .subtitulo-creditos {
+  .subtitulo-creditos,
+  .subtitulo-glosario {
     padding-bottom: var(--10px);
   }
 
   .bloque-creditos-50,
   .bloque-creditos-100 {
+    padding: var(--20px);
+    margin-bottom: var(--10px);
+  }
+
+  .bloque-glosario-50,
+  .bloque-glosario-100 {
     padding: var(--20px);
     margin-bottom: var(--10px);
   }
