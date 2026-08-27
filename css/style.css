@@ -463,6 +463,26 @@ header {
   color: var(--morado-obscuro)
 }
 
+.borde-verde {
+  border: 1px solid var(--verde-pacch);
+}
+
+.borde-naranja {
+  border: 1px solid var(--naranja-pacch);
+}
+
+.borde-azul {
+  border: 1px solid var(--azul-pacch);
+}
+
+.borde-morado {
+  border: 1px solid var(--morado-pacch);
+}
+
+audio {
+  border-radius: 1000px;
+}
+
 /* Tamaños */
 .borde-grande {
   border-radius: var(--borde-grande);
