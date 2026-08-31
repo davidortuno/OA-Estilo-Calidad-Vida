@@ -344,9 +344,7 @@ header {
 }
 
 .navbar-oa-pacch {
-  background-color: #e1e1e1a9;
-  backdrop-filter: blur(50px);
-  /* background-color: var(--blanco-texto); */
+  background-color: var(--blanco-texto);
   padding: 0.875rem 1.25rem;
   border-radius: 1.25rem;
 }
