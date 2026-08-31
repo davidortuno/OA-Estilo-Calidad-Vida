@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initScrollProgress();
   initShareTooltips();
+  initSocialPopups();
 });
 
 /**
@@ -92,7 +93,7 @@ function initShareTooltips() {
           // Cambiar texto a "¡Copiado!"
           tooltipInstance.setContent({ ".tooltip-inner": "¡Copiado!" });
 
-          // Ocultar y remover estado :focus tras 1.2s
+          // Ocultar y remover estado :focus tras 1s
           setTimeout(() => {
             tooltipInstance.hide();
             btnCopiar.blur();
@@ -101,11 +102,39 @@ function initShareTooltips() {
             setTimeout(() => {
               tooltipInstance.setContent({ ".tooltip-inner": "Copiar link" });
             }, 300);
-          }, 1200);
+          }, 1000);
         })
         .catch((err) => {
           console.error("Error al copiar enlace:", err);
         });
     });
   }
+}
+
+/**
+ * Ventanas emergentes (popups) para compartir en redes sociales
+ */
+function initSocialPopups() {
+  // Seleccionamos solo los enlaces a los que les agregamos la clase 'js-share-popup' en el HTML
+  const shareLinks = document.querySelectorAll('.js-share-popup');
+
+  shareLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      
+      const url = this.href;
+      const popupWidth = 600;
+      const popupHeight = 500;
+      
+      // Cálculo para centrar el popup dinámicamente según la pantalla del usuario
+      const left = (window.innerWidth / 2) - (popupWidth / 2) + window.screenX;
+      const top = (window.innerHeight / 2) - (popupHeight / 2) + window.screenY;
+
+      window.open(
+        url,
+        'shareWindow',
+        `width=${popupWidth},height=${popupHeight},left=${left},top=${top},toolbar=0,location=0,menubar=0,scrollbars=1,resizable=1`
+      );
+    });
+  });
 }
